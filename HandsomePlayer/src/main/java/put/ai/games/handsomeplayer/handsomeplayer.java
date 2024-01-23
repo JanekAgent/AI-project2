@@ -16,6 +16,7 @@ public class handsomeplayer extends Player {
     private boolean firstRund = true;
     private int size;
     private long timeOfRound;
+    private Player.Color oponentColor;
 
     @Override
     public String getName() {
@@ -32,8 +33,10 @@ public class handsomeplayer extends Player {
             size = b.getSize();
             firstRund = false;
             timeOfRound = this.getTime();
+            oponentColor = getOpponent(getColor());
+            
         }
-        
+
         List<Move> moves = b.getMovesFor(getColor());
         return moves.get(random.nextInt(moves.size()));
     }
