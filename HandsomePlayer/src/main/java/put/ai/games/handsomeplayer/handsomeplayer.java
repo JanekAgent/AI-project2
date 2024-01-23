@@ -13,7 +13,9 @@ import put.ai.games.game.Player;
 public class handsomeplayer extends Player {
 
     private Random random = new Random(0xdeadbeef);
-
+    private boolean firstRund = true;
+    private int size;
+    private long timeOfRound;
 
     @Override
     public String getName() {
@@ -21,8 +23,17 @@ public class handsomeplayer extends Player {
     }
 
 
+
+
     @Override
     public Move nextMove(Board b) {
+        if (firstRund){
+            System.out.println(b.getMovesFor(getColor()));
+            size = b.getSize();
+            firstRund = false;
+            timeOfRound = this.getTime();
+        }
+        
         List<Move> moves = b.getMovesFor(getColor());
         return moves.get(random.nextInt(moves.size()));
     }
