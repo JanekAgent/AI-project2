@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package put.ai.games.naiveplayer;
+package put.ai.games.handsomeplayer;
 
 import java.util.List;
 import java.util.Random;
@@ -10,7 +10,7 @@ import put.ai.games.game.Board;
 import put.ai.games.game.Move;
 import put.ai.games.game.Player;
 
-public class NaivePlayer extends Player {
+public class handsomeplayer extends Player {
 
     private Random random = new Random(0xdeadbeef);
 
