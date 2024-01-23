@@ -10,7 +10,7 @@ import put.ai.games.game.Board;
 import put.ai.games.game.Move;
 import put.ai.games.game.Player;
 
-public class handsomeplayer extends Player {
+public class handsomeplayermonte extends Player {
 
     private Random random = new Random(0xdeadbeef);
     private boolean firstRund = true;
