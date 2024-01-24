@@ -179,10 +179,10 @@ public class NaivePlayer extends Player {
             
         }
         for (Node child : root.children) {
-            if (child.board.getMovesFor(getColor())==b.getMovesFor(getColor())) {
+            if (child.board.getMovesFor(getColor()).equals(b.getMovesFor(getColor()))) {
                 root = child;
                 root.parent = null;
-                System.out.println();
+                System.out.println("mleko");
                 break;
             }
         }
@@ -196,10 +196,10 @@ public class NaivePlayer extends Player {
         System.out.println("mefe");
         if (bestMove == null || !b.getMovesFor(getColor()).contains(bestMove)) {
             System.out.println("Blad");
-            System.out.println(bestMove);
-            for (Node child : root.children) {
-                System.out.println(child.move);
-            }
+            // System.out.println(bestMove);
+            // for (Node child : root.children) {
+            //     System.out.println(child.move);
+            // }
             List<Move> moves = b.getMovesFor(getColor());
             bestMove = moves.get(random.nextInt(moves.size()));
             
